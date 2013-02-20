@@ -28,6 +28,7 @@
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
     
     NSLog(@"%@",viewController);
+    
     [[NSUserDefaults standardUserDefaults] setValue:@"true" forKey:@"soloactivos"];
     [viewController.navigationController popToViewController:[viewController.navigationController.viewControllers objectAtIndex:0] animated:YES];
     
