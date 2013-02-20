@@ -296,7 +296,7 @@
             }
             
         }
-        NSLog(@"%@",otrosamigos);
+        NSLog(@"%@ eduardo texto",otrosamigos);
         
         [self.delegate ContactsAgregar:otrosamigos deAmigos:otrosamigos];
     }else{
