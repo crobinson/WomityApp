@@ -297,6 +297,7 @@
             
         }
         NSLog(@"%@",otrosamigos);
+        
         [self.delegate ContactsAgregar:otrosamigos deAmigos:otrosamigos];
     }else{
         
