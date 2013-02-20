@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import<AddressBook/AddressBook.h>
 
 @interface ViewController : UIViewController
-
+@property (nonatomic, retain) NSMutableData *responseData;
 @end
