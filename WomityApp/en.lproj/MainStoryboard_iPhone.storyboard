@@ -7798,25 +7798,651 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="select.png" width="90" height="30"/>
         <image name="splash.png" width="320" height="480"/>
     </resources>
+    <classes>
+        <class className="AmigosCrearViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AmigosCrearViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="agregar:"/>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="cerrarimagen:"/>
+                <relationship kind="action" name="onButtonClick:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="botoncerrar" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="cerrarboton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="myTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="reloj" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="relojimagen" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="vistaimagen" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistareloj" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistarelopj" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="AmigosViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AmigosViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="Loadcrear:"/>
+                <relationship kind="action" name="ShowSettings:"/>
+                <relationship kind="action" name="amigos:"/>
+                <relationship kind="action" name="ayuda:"/>
+                <relationship kind="action" name="buscar:"/>
+                <relationship kind="action" name="cerrarimagen:"/>
+                <relationship kind="action" name="eliminarcontacto:"/>
+                <relationship kind="action" name="loadtipoA:"/>
+                <relationship kind="action" name="loadtipoB:"/>
+                <relationship kind="action" name="loadtipoF:"/>
+                <relationship kind="action" name="onButtonClick:" candidateClass="UIButton"/>
+                <relationship kind="action" name="perfil:"/>
+                <relationship kind="outlet" name="botoncerrar" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="myTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="myview" candidateClass="UIView"/>
+                <relationship kind="outlet" name="reloj" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="relojimagen" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="solicitudescont" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="vistaimagen" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistareloj" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="AmigosplantillaViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AmigosplantillaViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="onButtonClick:" candidateClass="UIButton"/>
+                <relationship kind="action" name="volver:"/>
+            </relationships>
+        </class>
+        <class className="AyudaViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AyudaViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="gotoweb:"/>
+                <relationship kind="outlet" name="mywebview" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="reloj" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="vistareloj" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="ComentariosViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ComentariosViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="Loadcrear:"/>
+                <relationship kind="action" name="amigos:"/>
+                <relationship kind="action" name="ayuda:"/>
+                <relationship kind="action" name="cerrarimagen:"/>
+                <relationship kind="action" name="closebaby:"/>
+                <relationship kind="action" name="goBack"/>
+                <relationship kind="action" name="gobackbaby:"/>
+                <relationship kind="action" name="loadtipoA:"/>
+                <relationship kind="action" name="loadtipoB:"/>
+                <relationship kind="action" name="loadtipoF:"/>
+                <relationship kind="action" name="onButtonClick:" candidateClass="UIButton"/>
+                <relationship kind="action" name="perfil:"/>
+                <relationship kind="outlet" name="botonVotar" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="botoncerrar" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="campocomentario" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="myView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="myscrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="reloj" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="titulo" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="vistaimagen" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistareloj" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="ContactsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ContactsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="Done:"/>
+                <relationship kind="action" name="enviar:"/>
+                <relationship kind="action" name="onButtonClick:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="reloj" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="vistareloj" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="CrearOpcionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CrearOpcionViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="onButtonClick:" candidateClass="UIButton"/>
+                <relationship kind="action" name="uploadPhoto:"/>
+                <relationship kind="outlet" name="counterLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="datawomit" candidateClass="NSDictionary"/>
+                <relationship kind="outlet" name="descripcionLabel" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="descriptionView" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="fofoOpcion" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="imagePhoto" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="imagenLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="imagenView" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="nameView" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="nombreLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="opcionescount" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="otrosLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="placeholder1" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="placeholder2" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="reloj" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="vistareloj" candidateClass="UIView"/>
+                <relationship kind="outlet" name="webLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="webViewBK" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="womityname" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="CrearWomity1ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CrearWomity1ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="Loadcrear:"/>
+                <relationship kind="action" name="ShowSettings:"/>
+                <relationship kind="action" name="amigos:"/>
+                <relationship kind="action" name="ayuda:"/>
+                <relationship kind="action" name="loadtipoA:"/>
+                <relationship kind="action" name="loadtipoB:"/>
+                <relationship kind="action" name="loadtipoF:"/>
+                <relationship kind="action" name="mostrarPicker2:"/>
+                <relationship kind="action" name="mostrarPicker3:"/>
+                <relationship kind="action" name="mostrarPicker:"/>
+                <relationship kind="action" name="onButtonClick:" candidateClass="UIButton"/>
+                <relationship kind="action" name="perfil:"/>
+                <relationship kind="action" name="quitarPickerDone:"/>
+                <relationship kind="action" name="siguiente:"/>
+                <relationship kind="outlet" name="day" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="descripcion" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="hour" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="minutes" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="name" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="picker" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="picker2" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="picker3" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="pickerView" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="pickernuevo" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="placeholder1" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="placeholder2" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="reloj" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="save" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="switch1" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="vistaPicker" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistaPicker2" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistaPicker3" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistagris1" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistagris2" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistappal" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistareloj" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="CrearWomity2ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CrearWomity2ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="Loadcrear:"/>
+                <relationship kind="action" name="ShowSettings:"/>
+                <relationship kind="action" name="amigos:"/>
+                <relationship kind="action" name="ayuda:"/>
+                <relationship kind="action" name="cerrarimagen:"/>
+                <relationship kind="action" name="gotoweb:"/>
+                <relationship kind="action" name="loadtipoA:"/>
+                <relationship kind="action" name="loadtipoB:"/>
+                <relationship kind="action" name="loadtipoF:"/>
+                <relationship kind="action" name="onButtonClick:" candidateClass="UIButton"/>
+                <relationship kind="action" name="perfil:"/>
+                <relationship kind="action" name="siguiente:"/>
+                <relationship kind="action" name="verimagen:"/>
+                <relationship kind="action" name="volver:"/>
+                <relationship kind="outlet" name="botoncerrar" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="botonfinalizar" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="botonguardar" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="counterLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="descripcionLabel" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="descriptionView" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="fofoOpcion" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="imagePhoto" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="imagenLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="imagenView" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="imagengrande" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="nameView" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="nombreLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="otrosLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="placeholder1" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="placeholder2" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="reloj" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="relojimagen" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="vistaimagen" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistareloj" candidateClass="UIView"/>
+                <relationship kind="outlet" name="webLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="webViewBK" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="womityname" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="CustomImageView" superclassName="UIImageView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomImageView.h"/>
+        </class>
+        <class className="DescripcionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DescripcionViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="Loadcrear:"/>
+                <relationship kind="action" name="amigos:"/>
+                <relationship kind="action" name="ayuda:"/>
+                <relationship kind="action" name="cerrarimagen:"/>
+                <relationship kind="action" name="goBack"/>
+                <relationship kind="action" name="gobackbaby:"/>
+                <relationship kind="action" name="loadtipoA:"/>
+                <relationship kind="action" name="loadtipoB:"/>
+                <relationship kind="action" name="loadtipoF:"/>
+                <relationship kind="action" name="onButtonClick:" candidateClass="UIButton"/>
+                <relationship kind="action" name="perfil:"/>
+                <relationship kind="outlet" name="botonVotar" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="botoncerrar" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="campocomentario" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="myView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="myscrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="reloj" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="relojimagen" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="titulo" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="vistaimagen" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistareloj" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="FacebookViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FacebookViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="outlet" name="loading" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="LoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="login:"/>
+                <relationship kind="action" name="logout:"/>
+                <relationship kind="action" name="verayudas:"/>
+                <relationship kind="outlet" name="emailTextBackgroung" candidateClass="UIView"/>
+                <relationship kind="outlet" name="emailTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="passwordBackground" candidateClass="UIView"/>
+                <relationship kind="outlet" name="paswordTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="reloj" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="vistareloj" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="ModificarOpcionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ModificarOpcionViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="onButtonClick:" candidateClass="UIButton"/>
+                <relationship kind="action" name="quitarPickerDone:"/>
+                <relationship kind="outlet" name="counterLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="datawomit" candidateClass="NSDictionary"/>
+                <relationship kind="outlet" name="descripcionLabel" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="descriptionView" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="fofoOpcion" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="imagePhoto" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="imagenLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="imagenView" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="nameView" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="nombreLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="otrosLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="reloj" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="vistareloj" candidateClass="UIView"/>
+                <relationship kind="outlet" name="webLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="webViewBK" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="womityname" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ModificarWomityViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ModificarWomityViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="mostrarPicker2:"/>
+                <relationship kind="action" name="mostrarPicker3:"/>
+                <relationship kind="action" name="mostrarPicker:"/>
+                <relationship kind="action" name="onButtonClick:" candidateClass="UIButton"/>
+                <relationship kind="action" name="quitarPickerDone:"/>
+                <relationship kind="action" name="siguiente:"/>
+                <relationship kind="outlet" name="day" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="descripcion" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="hour" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="minutes" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="name" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="picker" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="picker2" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="picker3" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="reloj" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="save" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="switch1" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="vistaPicker" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistaPicker2" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistaPicker3" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistablanca" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistagris1" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistagris2" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistappal" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistareloj" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="MyNavigationViewController" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyNavigationViewController.h"/>
+        </class>
+        <class className="OptionCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OptionCell.h"/>
+            <relationships>
+                <relationship kind="action" name="deleteAction:"/>
+                <relationship kind="action" name="modifyAction:"/>
+                <relationship kind="outlet" name="DeleteCell" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="cescription" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="counter" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="fotothumb" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="gotoimg" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="gotoweb" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="link" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="modify" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="name" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="vistagris" candidateClass="UIView"/>
+                <relationship kind="outlet" name="webtitulo" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="PerfilViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PerfilViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="mostrarPicker2:"/>
+                <relationship kind="action" name="mostrarPicker:"/>
+                <relationship kind="action" name="onButtonClick:" candidateClass="UIButton"/>
+                <relationship kind="action" name="quitarPickerDone2:"/>
+                <relationship kind="action" name="quitarPickerDone:"/>
+                <relationship kind="outlet" name="apellido" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="botonfoto" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="celda1" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="celda2" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="celda3" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="celda4" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="celda5" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="celda6" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="email" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="fechaCampo" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="fecnacLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="foto" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="fotoview" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="myScrollView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="nombre" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="pickerFecha" candidateClass="UIDatePicker"/>
+                <relationship kind="outlet" name="pickerView" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="pickerView2" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="reloj" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="scrollview" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="sexoCampo" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="sexoLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="vistaPicker" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistaPicker2" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistareloj" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="RegistrateViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RegistrateViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="mostrarPicker2:"/>
+                <relationship kind="action" name="mostrarPicker:"/>
+                <relationship kind="action" name="quitarPickerDone2:"/>
+                <relationship kind="action" name="quitarPickerDone:"/>
+                <relationship kind="action" name="registrarse:"/>
+                <relationship kind="action" name="verayudas:"/>
+                <relationship kind="outlet" name="apellidoLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="contrasenaLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="email2Label" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="emailLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="fechacampo" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="fecnacLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="fotoopcion" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="myScrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="nombreLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="oickerView2" candidateClass="UIView"/>
+                <relationship kind="outlet" name="pickerFecha" candidateClass="UIDatePicker"/>
+                <relationship kind="outlet" name="pickerView" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="pickerView2" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="reloj" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="sexoCampo" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="sexoLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="vista1" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vista2" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vista3" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vista4" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vista5" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vista6" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vista7" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vista8" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistaPicker" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistaPicker2" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="TerminosViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TerminosViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="outlet" name="comentariosview" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="reloj" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="titulolabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="vistareloj" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+        </class>
+        <class className="VotarViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VotarViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cerrarimagen:"/>
+                <relationship kind="action" name="goBack"/>
+                <relationship kind="action" name="onButtonClick:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="bocadillo" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="botoncerrar" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="myscrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="reloj" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="relojimagen" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="vistaimagen" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistareloj" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="WomitsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WomitsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="Loadcrear:"/>
+                <relationship kind="action" name="amigos:"/>
+                <relationship kind="action" name="ayuda:"/>
+                <relationship kind="action" name="cerrarimagen:"/>
+                <relationship kind="action" name="loadtipoA:"/>
+                <relationship kind="action" name="loadtipoB:"/>
+                <relationship kind="action" name="loadtipoF:"/>
+                <relationship kind="action" name="onButtonClick:" candidateClass="UIButton"/>
+                <relationship kind="action" name="perfil:"/>
+                <relationship kind="outlet" name="botoncerrar" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="myTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="reloj" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="relojimagen" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="titulo" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="vistaimagen" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistareloj" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="buscarAmigosViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/buscarAmigosViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="anadir:"/>
+                <relationship kind="action" name="buscar:"/>
+                <relationship kind="action" name="enviar:"/>
+                <relationship kind="action" name="onButtonClick:" candidateClass="UIButton"/>
+                <relationship kind="action" name="volver:"/>
+                <relationship kind="outlet" name="contador" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="myscrollview" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="mytableview" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="reloj" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="resut" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="textoBuscar" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="vistacell" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="vistareloj" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="emailComposerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/emailComposerViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="Done:"/>
+                <relationship kind="action" name="enviar:"/>
+                <relationship kind="action" name="onButtonClick:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="commentView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="commnetTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="emailTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="emailView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="reloj" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="vistareloj" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="emailImporterViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/emailImporterViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="Done:"/>
+                <relationship kind="action" name="hidePicker:"/>
+                <relationship kind="action" name="mostrarPicker:"/>
+                <relationship kind="action" name="onButtonClick:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="Picker" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="btn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="chooseServerLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="emailTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="emailViewCorner" candidateClass="UIView"/>
+                <relationship kind="outlet" name="passTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="passViewCorner" candidateClass="UIView"/>
+                <relationship kind="outlet" name="viewContainer" candidateClass="UIView"/>
+                <relationship kind="outlet" name="viewServiceCorner" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="invitar2ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/invitar2ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="Loadcrear:"/>
+                <relationship kind="action" name="ShowSettings:"/>
+                <relationship kind="action" name="amigos:"/>
+                <relationship kind="action" name="ayuda:"/>
+                <relationship kind="action" name="cancelado:"/>
+                <relationship kind="action" name="cerrar:"/>
+                <relationship kind="action" name="enviar:"/>
+                <relationship kind="action" name="loadtipoA:"/>
+                <relationship kind="action" name="loadtipoB:"/>
+                <relationship kind="action" name="loadtipoF:"/>
+                <relationship kind="action" name="onButtonClick:" candidateClass="UIButton"/>
+                <relationship kind="action" name="perfil:"/>
+                <relationship kind="action" name="showPeoplePickerController:"/>
+                <relationship kind="action" name="volver:"/>
+                <relationship kind="action" name="volvervolver:"/>
+                <relationship kind="outlet" name="boton1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="boton2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="correosLabel" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="mensaje1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="mensaje2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="mensaje3" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="mensajeLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="myscroll" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="mywebview" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="reloj" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="vistagris1" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistagris2" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistagris3" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistagris4" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistareloj" candidateClass="UIView"/>
+                <relationship kind="outlet" name="womityName" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="invitarViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/invitarViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="Loadcrear:"/>
+                <relationship kind="action" name="ShowSettings:"/>
+                <relationship kind="action" name="amigos:"/>
+                <relationship kind="action" name="ayuda:"/>
+                <relationship kind="action" name="cancelado:"/>
+                <relationship kind="action" name="cerrar:"/>
+                <relationship kind="action" name="enviar:"/>
+                <relationship kind="action" name="loadtipoA:"/>
+                <relationship kind="action" name="loadtipoB:"/>
+                <relationship kind="action" name="loadtipoF:"/>
+                <relationship kind="action" name="onButtonClick:" candidateClass="UIButton"/>
+                <relationship kind="action" name="perfil:"/>
+                <relationship kind="action" name="showPeoplePickerController:"/>
+                <relationship kind="action" name="volver:"/>
+                <relationship kind="action" name="volvervolver:"/>
+                <relationship kind="outlet" name="boton1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="boton2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="correosLabel" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="mensaje1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="mensaje2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="mensaje3" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="mensajeLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="myscroll" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="mywebview" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="reloj" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="vistagris1" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistagris2" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistagris3" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistagris4" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistareloj" candidateClass="UIView"/>
+                <relationship kind="outlet" name="womityName" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="participantesViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/participantesViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mytableview" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="reloj" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="vistareloj" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="recordarpswrdViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/recordarpswrdViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="recordar:"/>
+                <relationship kind="outlet" name="mailBackground" candidateClass="UIView"/>
+                <relationship kind="outlet" name="mailLabel" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="solicitudesViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/solicitudesViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="outlet" name="mytableview" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="reloj" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="vistareloj" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="tabBarViewController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/tabBarViewController.h"/>
+        </class>
+        <class className="urlViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/urlViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="done:"/>
+                <relationship kind="action" name="seleccionar:"/>
+                <relationship kind="outlet" name="mytextfield" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="mywebview" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="reloj" candidateClass="UIActivityIndicatorView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="D9K-YB-2sH"/>
-        <segue reference="0h8-NJ-NMY"/>
-        <segue reference="52o-zS-c8m"/>
-        <segue reference="IYC-QP-acb"/>
         <segue reference="TVq-gB-RwD"/>
         <segue reference="6T4-l3-2Ne"/>
-        <segue reference="mKh-jK-aCG"/>
+        <segue reference="52o-zS-c8m"/>
+        <segue reference="IYC-QP-acb"/>
+        <segue reference="0h8-NJ-NMY"/>
         <segue reference="njs-hf-4br"/>
-        <segue reference="avX-xh-cA1"/>
+        <segue reference="mKh-jK-aCG"/>
         <segue reference="r9W-Mw-ggV"/>
+        <segue reference="avX-xh-cA1"/>
         <segue reference="dYZ-Br-ovl"/>
-        <segue reference="c05-NJ-RgF"/>
+        <segue reference="D9K-YB-2sH"/>
         <segue reference="eO9-jw-v1j"/>
+        <segue reference="nGr-t9-lhk"/>
         <segue reference="nXa-bJ-RbX"/>
     </inferredMetricsTieBreakers>
 </document>

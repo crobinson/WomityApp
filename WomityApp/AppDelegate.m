@@ -8,7 +8,11 @@
 
 #import "AppDelegate.h"
 #import "Flurry.h"
+#import "MDMultipleMasterDetailManager.h"
+
 @implementation AppDelegate
+
+@synthesize masterDetailManager;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -19,6 +23,32 @@
      [Flurry startSession:@"4F5B2TF8Q7VH5NKHQ3J5"];
     
    // self.window.frame = CGRectMake(0, -100, 320, 480);
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        
+        //iPad
+        
+        UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"iPad2StoryBoard" bundle:nil];
+        
+        UISplitViewController * splitViewController = [storyboard instantiateViewControllerWithIdentifier:@"split"];
+        
+        //Medida de menu en ancho e inclusión de Gestures al menu
+        [splitViewController setValue:[NSNumber numberWithFloat:256.0] forKey:@"_masterColumnWidth"];
+        if ([splitViewController respondsToSelector:@selector(setPresentsWithGesture:)])
+            [splitViewController setPresentsWithGesture:YES];
+        
+        //Decisión de vista principal segun identificador  del Storyboard elegido.
+        UIViewController* detail2 = [splitViewController.storyboard instantiateViewControllerWithIdentifier:@"home"];
+        
+        //Crecion del masterDetailManager = Permite el cambio de vista principal desde el menu para el contenedor del splitViewController
+        self.masterDetailManager = [[MDMultipleMasterDetailManager alloc] initWithSplitViewController:splitViewController
+                                                                            withDetailRootControllers:[NSArray arrayWithObjects:detail2,nil]];
+        
+        //Definición del RootViewController  o vista Raiz
+        self.window.rootViewController =splitViewController;
+        
+    }
+    
     
     return YES;
 }
