@@ -10,7 +10,7 @@
 
 @class MDDetailViewController,Noticia;
 
-@interface MDMasterViewController : UITableViewController<UITableViewDataSource,UITableViewDelegate>{
+@interface MDMasterViewController : UITableViewController{
 
     NSMutableArray *array;
     

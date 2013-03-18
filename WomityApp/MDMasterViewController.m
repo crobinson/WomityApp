@@ -46,6 +46,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UIImage *gradientImage44 = [UIImage imageNamed:@"Splash.jpg"];
+    
+    [[UINavigationBar appearance] setBackgroundImage:gradientImage44 forBarMetrics:UIBarMetricsDefault];
+    
     [self.tableView setDelegate:self];
     [self.tableView setDataSource:self];
     
@@ -62,24 +66,11 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
-}
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 2;
-}
 
 -(UITableViewCell *)tableView:(UITableView *)tableView1 cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *stringIdentifier = @"cell";
-    
-    UITableViewCell *cell = [tableView1 dequeueReusableCellWithIdentifier:stringIdentifier];
-    
-    if(cell == nil){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:stringIdentifier];
-    }
-    
-    cell.textLabel.text = [array objectAtIndex:indexPath.row];
+    UITableViewCell *cell = [super tableView:tableView1
+                       cellForRowAtIndexPath:indexPath];
     
      
     

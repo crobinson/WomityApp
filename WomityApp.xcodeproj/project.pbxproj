@@ -281,6 +281,18 @@
 		0BB033C016F2648D005E736D /* Womits-finalizados-act@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BB0330216F2648A005E736D /* Womits-finalizados-act@2x.png */; };
 		0BB033C116F2648D005E736D /* Womits-finalizados.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BB0330316F2648A005E736D /* Womits-finalizados.png */; };
 		0BB033C216F2648D005E736D /* Womits-finalizados@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BB0330416F2648A005E736D /* Womits-finalizados@2x.png */; };
+		0BB033C416F2913D005E736D /* Ayuda_port.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0BB033C316F2913C005E736D /* Ayuda_port.jpg */; };
+		0BB033C616F2914A005E736D /* Ayuda_port@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0BB033C516F29149005E736D /* Ayuda_port@2x.jpg */; };
+		0BB033CA16F73FE2005E736D /* Womity_logo@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0BB033C916F73FE2005E736D /* Womity_logo@2x.jpg */; };
+		0BB033CC16F73FEF005E736D /* Womity_logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0BB033CB16F73FEE005E736D /* Womity_logo.jpg */; };
+		0BB033CE16F73FF6005E736D /* Tab-bar_Port@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0BB033CD16F73FF6005E736D /* Tab-bar_Port@2x.jpg */; };
+		0BB033D016F73FFE005E736D /* Tab-bar_Port.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0BB033CF16F73FFE005E736D /* Tab-bar_Port.jpg */; };
+		0BB033D216F74006005E736D /* Splash_portrait@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0BB033D116F74006005E736D /* Splash_portrait@2x.jpg */; };
+		0BB033D416F7400C005E736D /* Splash_portrait.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0BB033D316F7400C005E736D /* Splash_portrait.jpg */; };
+		0BB033D616F74018005E736D /* Reg_screen_port@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0BB033D516F74018005E736D /* Reg_screen_port@2x.jpg */; };
+		0BB033D816F74026005E736D /* Reg_screen_port.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0BB033D716F74026005E736D /* Reg_screen_port.jpg */; };
+		0BB033DA16F7402E005E736D /* Login_port@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0BB033D916F7402E005E736D /* Login_port@2x.jpg */; };
+		0BB033DC16F74041005E736D /* Login_port.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0BB033DB16F74041005E736D /* Login_port.jpg */; };
 		0BB283A016691B530050967E /* cambiarVoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BB2839F16691B530050967E /* cambiarVoto.png */; };
 		0BB283A416695E100050967E /* icono2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BB283A316695E100050967E /* icono2.png */; };
 		0BB283B1166960880050967E /* circunot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BB283A9166960840050967E /* circunot.png */; };
@@ -708,6 +720,18 @@
 		0BB0330216F2648A005E736D /* Womits-finalizados-act@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Womits-finalizados-act@2x.png"; sourceTree = "<group>"; };
 		0BB0330316F2648A005E736D /* Womits-finalizados.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Womits-finalizados.png"; sourceTree = "<group>"; };
 		0BB0330416F2648A005E736D /* Womits-finalizados@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Womits-finalizados@2x.png"; sourceTree = "<group>"; };
+		0BB033C316F2913C005E736D /* Ayuda_port.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Ayuda_port.jpg; path = ../Ayuda_port.jpg; sourceTree = "<group>"; };
+		0BB033C516F29149005E736D /* Ayuda_port@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Ayuda_port@2x.jpg"; path = "../Ayuda_port@2x.jpg"; sourceTree = "<group>"; };
+		0BB033C916F73FE2005E736D /* Womity_logo@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Womity_logo@2x.jpg"; sourceTree = "<group>"; };
+		0BB033CB16F73FEE005E736D /* Womity_logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Womity_logo.jpg; sourceTree = "<group>"; };
+		0BB033CD16F73FF6005E736D /* Tab-bar_Port@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Tab-bar_Port@2x.jpg"; sourceTree = "<group>"; };
+		0BB033CF16F73FFE005E736D /* Tab-bar_Port.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Tab-bar_Port.jpg"; sourceTree = "<group>"; };
+		0BB033D116F74006005E736D /* Splash_portrait@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Splash_portrait@2x.jpg"; sourceTree = "<group>"; };
+		0BB033D316F7400C005E736D /* Splash_portrait.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Splash_portrait.jpg; sourceTree = "<group>"; };
+		0BB033D516F74018005E736D /* Reg_screen_port@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Reg_screen_port@2x.jpg"; sourceTree = "<group>"; };
+		0BB033D716F74026005E736D /* Reg_screen_port.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Reg_screen_port.jpg; sourceTree = "<group>"; };
+		0BB033D916F7402E005E736D /* Login_port@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Login_port@2x.jpg"; sourceTree = "<group>"; };
+		0BB033DB16F74041005E736D /* Login_port.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Login_port.jpg; sourceTree = "<group>"; };
 		0BB2839F16691B530050967E /* cambiarVoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cambiarVoto.png; sourceTree = "<group>"; };
 		0BB283A316695E100050967E /* icono2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono2.png; sourceTree = "<group>"; };
 		0BB283A9166960840050967E /* circunot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circunot.png; sourceTree = "<group>"; };
@@ -1041,6 +1065,18 @@
 		0BB0324616F26489005E736D /* Cortes-womity */ = {
 			isa = PBXGroup;
 			children = (
+				0BB033DB16F74041005E736D /* Login_port.jpg */,
+				0BB033D916F7402E005E736D /* Login_port@2x.jpg */,
+				0BB033D716F74026005E736D /* Reg_screen_port.jpg */,
+				0BB033D516F74018005E736D /* Reg_screen_port@2x.jpg */,
+				0BB033D316F7400C005E736D /* Splash_portrait.jpg */,
+				0BB033D116F74006005E736D /* Splash_portrait@2x.jpg */,
+				0BB033CF16F73FFE005E736D /* Tab-bar_Port.jpg */,
+				0BB033CD16F73FF6005E736D /* Tab-bar_Port@2x.jpg */,
+				0BB033CB16F73FEE005E736D /* Womity_logo.jpg */,
+				0BB033C916F73FE2005E736D /* Womity_logo@2x.jpg */,
+				0BB033C316F2913C005E736D /* Ayuda_port.jpg */,
+				0BB033C516F29149005E736D /* Ayuda_port@2x.jpg */,
 				0BB0324716F26489005E736D /* Agregar.png */,
 				0BB0324816F26489005E736D /* Agregar@2x.png */,
 				0BB0324916F26489005E736D /* Amigos_womity.png */,
@@ -1786,6 +1822,18 @@
 				0BB033C016F2648D005E736D /* Womits-finalizados-act@2x.png in Resources */,
 				0BB033C116F2648D005E736D /* Womits-finalizados.png in Resources */,
 				0BB033C216F2648D005E736D /* Womits-finalizados@2x.png in Resources */,
+				0BB033C416F2913D005E736D /* Ayuda_port.jpg in Resources */,
+				0BB033C616F2914A005E736D /* Ayuda_port@2x.jpg in Resources */,
+				0BB033CA16F73FE2005E736D /* Womity_logo@2x.jpg in Resources */,
+				0BB033CC16F73FEF005E736D /* Womity_logo.jpg in Resources */,
+				0BB033CE16F73FF6005E736D /* Tab-bar_Port@2x.jpg in Resources */,
+				0BB033D016F73FFE005E736D /* Tab-bar_Port.jpg in Resources */,
+				0BB033D216F74006005E736D /* Splash_portrait@2x.jpg in Resources */,
+				0BB033D416F7400C005E736D /* Splash_portrait.jpg in Resources */,
+				0BB033D616F74018005E736D /* Reg_screen_port@2x.jpg in Resources */,
+				0BB033D816F74026005E736D /* Reg_screen_port.jpg in Resources */,
+				0BB033DA16F7402E005E736D /* Login_port@2x.jpg in Resources */,
+				0BB033DC16F74041005E736D /* Login_port.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
