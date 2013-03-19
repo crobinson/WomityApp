@@ -90,11 +90,11 @@
             <objects>
                 <viewController id="Hyh-mR-JC2" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0lm-VV-3G8">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Login_port.jpg" id="4Q4-6J-cAY">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="748"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" minimumFontSize="17" id="0MJ-OS-GTj">
@@ -192,6 +192,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
                     <connections>
@@ -201,7 +202,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ogx-kb-Ci9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2758" y="-1360"/>
+            <point key="canvasLocation" x="2350" y="-1366"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XcL-vT-20x">
@@ -237,10 +238,205 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="0iB-vP-9vh"/>
+                    <connections>
+                        <segue destination="Hyh-mR-JC2" kind="modal" identifier="gotoLogin" id="539-5g-Knv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f50-H0-Wqj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1979" y="441"/>
+            <point key="canvasLocation" x="2083" y="-79"/>
+        </scene>
+        <!--Registrate View Controller-->
+        <scene sceneID="Ffb-b7-7bw">
+            <objects>
+                <viewController id="YyV-u9-h5n" customClass="RegistrateViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PZH-yP-7gY">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Reg_screen_port.jpg" id="Khe-KR-rMJ">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" id="k8q-DY-9R3">
+                                <rect key="frame" x="352" y="936" width="65" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93333339689999995" green="0.082352943720000002" blue="0.1019607931" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="381-hm-ok0">
+                                <rect key="frame" x="346" y="914" width="78" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Cancelar">
+                                    <color key="titleColor" red="0.9444940476" green="0.0" blue="0.0082743126170000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancel:" destination="YyV-u9-h5n" eventType="touchUpInside" id="4ZW-5v-N65"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Al clicar en 'Regístrate' aceptas nuestros términos y nuestras condiciones de privacidad" id="x51-mL-aC4">
+                                <rect key="frame" x="150" y="602" width="470" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="sexo" minimumFontSize="17" id="J9b-02-7Cf">
+                                <rect key="frame" x="208" y="535" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="YyV-u9-h5n" id="Jbq-qs-pm9"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="dd/mm/aaaa" minimumFontSize="17" id="VzA-Mn-vHo">
+                                <rect key="frame" x="491" y="535" width="129" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="YyV-u9-h5n" id="nMn-4Q-ip5"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fV6-bJ-88f">
+                                <rect key="frame" x="317" y="532" width="303" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="mostrarPicker2:" destination="YyV-u9-h5n" eventType="touchUpInside" id="ouR-u0-gCZ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="0Os-kV-qsa">
+                                <rect key="frame" x="231" y="257" width="389" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="YyV-u9-h5n" id="nD5-cb-PqB"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="yNT-n0-hNi">
+                                <rect key="frame" x="231" y="314" width="389" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="YyV-u9-h5n" id="840-so-1L1"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="FR8-CP-sIr">
+                                <rect key="frame" x="231" y="369" width="389" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <connections>
+                                    <outlet property="delegate" destination="YyV-u9-h5n" id="tkH-vW-x19"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="Fr7-Be-mOg">
+                                <rect key="frame" x="298" y="425" width="317" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <connections>
+                                    <outlet property="delegate" destination="YyV-u9-h5n" id="MkA-mT-i6D"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="TfZ-nF-GPt">
+                                <rect key="frame" x="260" y="481" width="360" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="YyV-u9-h5n" id="HPZ-dy-XHK"/>
+                                </connections>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="flechagrey-1.png" id="Kjx-Ya-8Yb">
+                                <rect key="frame" x="283" y="545" width="16" height="9"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="flechagrey-1.png" id="EfI-v0-Aq5">
+                                <rect key="frame" x="599" y="545" width="16" height="9"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="lQr-mt-NnO">
+                                <rect key="frame" x="202" y="535" width="98" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="mostrarPicker:" destination="YyV-u9-h5n" eventType="touchUpInside" id="5eC-dd-unY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7Lw-9y-8m6">
+                                <rect key="frame" x="280" y="723" width="180" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="Btn_registro.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <connections>
+                        <outlet property="apellidoLabel" destination="yNT-n0-hNi" id="LbW-dN-esw"/>
+                        <outlet property="contrasenaLabel" destination="TfZ-nF-GPt" id="eam-YI-3FS"/>
+                        <outlet property="email2Label" destination="Fr7-Be-mOg" id="zke-zw-ghT"/>
+                        <outlet property="emailLabel" destination="FR8-CP-sIr" id="DAT-YB-F2m"/>
+                        <outlet property="fechacampo" destination="VzA-Mn-vHo" id="LNe-7H-DtK"/>
+                        <outlet property="nombreLabel" destination="0Os-kV-qsa" id="GPU-t5-2lL"/>
+                        <outlet property="sexoCampo" destination="J9b-02-7Cf" id="rYC-Xl-qKK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F0z-kX-yQa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3240" y="-113"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5xB-i2-XBl">
+            <objects>
+                <viewController id="F0C-Er-JgZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZsF-tj-EUh">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="T1I-Ij-ZID">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CgS-Ju-n3g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4076" y="169"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9Xo-S1-WAo">
@@ -308,11 +504,11 @@
             <objects>
                 <viewController id="PeK-G7-leT" customClass="FacebookViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x4g-9w-xWw">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" id="l4n-QF-hfx">
-                                <rect key="frame" x="0.0" y="52" width="768" height="952"/>
+                                <rect key="frame" x="0.0" y="52" width="1024" height="696"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -348,6 +544,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
                     <connections>
@@ -389,12 +586,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Btn_registro.png" width="180" height="128"/>
         <image name="Facebook.png" width="357" height="54"/>
         <image name="Inicio.png" width="357" height="62"/>
         <image name="Login_port.jpg" width="768" height="1024"/>
         <image name="Nuevo_reg.png" width="159" height="114"/>
+        <image name="Reg_screen_port.jpg" width="768" height="1024"/>
         <image name="botonCerrar.png" width="54" height="34"/>
         <image name="btn-mariquita-1.png" width="31" height="35"/>
+        <image name="flechagrey-1.png" width="16" height="9"/>
     </resources>
     <classes>
         <class className="FacebookViewController" superclassName="UIViewController">
@@ -427,6 +627,44 @@
         </class>
         <class className="MDOtherDetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MDOtherDetailViewController.h"/>
+        </class>
+        <class className="RegistrateViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RegistrateViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="mostrarPicker2:"/>
+                <relationship kind="action" name="mostrarPicker:"/>
+                <relationship kind="action" name="quitarPickerDone2:"/>
+                <relationship kind="action" name="quitarPickerDone:"/>
+                <relationship kind="action" name="registrarse:"/>
+                <relationship kind="action" name="verayudas:"/>
+                <relationship kind="outlet" name="apellidoLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="contrasenaLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="email2Label" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="emailLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="fechacampo" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="fecnacLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="fotoopcion" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="myScrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="nombreLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="oickerView2" candidateClass="UIView"/>
+                <relationship kind="outlet" name="pickerFecha" candidateClass="UIDatePicker"/>
+                <relationship kind="outlet" name="pickerView" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="pickerView2" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="reloj" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="sexoCampo" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="sexoLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="vista1" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vista2" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vista3" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vista4" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vista5" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vista6" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vista7" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vista8" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistaPicker" candidateClass="UIView"/>
+                <relationship kind="outlet" name="vistaPicker2" candidateClass="UIView"/>
+            </relationships>
         </class>
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>

@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import<AddressBook/AddressBook.h>
 
 
 @class Noticia;
 
 @interface MDDetailViewController : UIViewController <UISplitViewControllerDelegate,UIGestureRecognizerDelegate>{
     
-        
+        NSMutableData *responseData;
 }
 
 @property (strong, nonatomic) id detailItem;
