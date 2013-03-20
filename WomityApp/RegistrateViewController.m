@@ -250,13 +250,7 @@
     [self quitarPicker2];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-    //return (interfaceOrientation == UIInterfaceOrientationPortrait);
-    orientacion = interfaceOrientation;
-    return YES;
-}
+
 
 - (IBAction)cancel:(id)sender
 {
@@ -607,6 +601,115 @@
     NSURL *url = [ [ NSURL alloc ] initWithString: [NSString stringWithFormat:@"http://www.womity.com/womity/privacityfp"]];
     NSLog(@"%@",url);
     [[UIApplication sharedApplication] openURL:url];
+}
+
+- (NSUInteger)supportedInterfaceOrientations {
+    
+    if([[UIApplication sharedApplication] statusBarOrientation] == 1|| [[UIApplication sharedApplication] statusBarOrientation] == 2){
+        
+        imageview.image = [UIImage imageNamed:@"Reg_screen_port.jpg"];
+        nombreLabel.frame = CGRectMake(231, 257, 389, 30);
+        apellidoLabel.frame = CGRectMake(nombreLabel.frame.origin.x, nombreLabel.frame.origin.y + 57, 389, 30);
+        emailLabel.frame = CGRectMake(nombreLabel.frame.origin.x, apellidoLabel.frame.origin.y + 57, 389, 30);
+        email2Label.frame = CGRectMake(nombreLabel.frame.origin.x + 67, emailLabel.frame.origin.y + 55, 317, 30);
+        contrasenaLabel.frame = CGRectMake(nombreLabel.frame.origin.x + 29, email2Label.frame.origin.y + 54, 360, 30);
+        sexoCampo.frame = CGRectMake(contrasenaLabel.frame.origin.x - 48, contrasenaLabel.frame.origin.y + 54, 98, 32);
+        butonsexo.frame = CGRectMake(contrasenaLabel.frame.origin.x - 58, contrasenaLabel.frame.origin.y + 54, 98, 32);
+        fechasexo.frame = CGRectMake(butonsexo.frame.origin.x + 81, butonsexo.frame.origin.y + 10, 16, 9);
+        fechacampo.frame = CGRectMake(sexoCampo.frame.origin.x + 283, contrasenaLabel.frame.origin.y + 54, 129, 30);
+        butonfecha.frame = CGRectMake(sexoCampo.frame.origin.x + 115, butonsexo.frame.origin.y , 303, 37);
+        fechafecha.frame = CGRectMake(fechacampo.frame.origin.x + 108, fechacampo.frame.origin.y + 10, 16, 9);
+        privacidad.frame = CGRectMake(150, 602, 470, 46);
+        
+    }else{
+        imageview.image = [UIImage imageNamed:@"Reg_screen.jpg"];
+        nombreLabel.frame = CGRectMake(361, 172, 389, 30);
+        apellidoLabel.frame = CGRectMake(nombreLabel.frame.origin.x, nombreLabel.frame.origin.y + 57, 389, 30);
+        emailLabel.frame = CGRectMake(nombreLabel.frame.origin.x, apellidoLabel.frame.origin.y + 57, 389, 30);
+        email2Label.frame = CGRectMake(nombreLabel.frame.origin.x + 67, emailLabel.frame.origin.y + 55, 317, 30);
+        contrasenaLabel.frame = CGRectMake(nombreLabel.frame.origin.x + 29, email2Label.frame.origin.y + 54, 360, 30);
+        sexoCampo.frame = CGRectMake(contrasenaLabel.frame.origin.x - 48, contrasenaLabel.frame.origin.y + 54, 98, 32);
+        butonsexo.frame = CGRectMake(contrasenaLabel.frame.origin.x - 58, contrasenaLabel.frame.origin.y + 54, 98, 32);
+        fechasexo.frame = CGRectMake(butonsexo.frame.origin.x + 81, butonsexo.frame.origin.y + 10, 16, 9);
+        fechacampo.frame = CGRectMake(sexoCampo.frame.origin.x + 283, contrasenaLabel.frame.origin.y + 54, 129, 30);
+        butonfecha.frame = CGRectMake(sexoCampo.frame.origin.x + 115, butonsexo.frame.origin.y , 303, 37);
+        fechafecha.frame = CGRectMake(fechacampo.frame.origin.x + 108, fechacampo.frame.origin.y + 10, 16, 9);
+        privacidad.frame = CGRectMake(privacidad.frame.origin.x, privacidad.frame.origin.y + 40, 470, 46);
+    }
+    
+    return (UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscape  | UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight);
+}
+
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
+    if([[UIApplication sharedApplication] statusBarOrientation] == 3|| [[UIApplication sharedApplication] statusBarOrientation] == 4){
+        
+        imageview.image = [UIImage imageNamed:@"Reg_screen_port.jpg"];
+        nombreLabel.frame = CGRectMake(231, 257, 389, 30);
+        apellidoLabel.frame = CGRectMake(nombreLabel.frame.origin.x, nombreLabel.frame.origin.y + 57, 389, 30);
+        emailLabel.frame = CGRectMake(nombreLabel.frame.origin.x, apellidoLabel.frame.origin.y + 57, 389, 30);
+        email2Label.frame = CGRectMake(nombreLabel.frame.origin.x + 67, emailLabel.frame.origin.y + 55, 317, 30);
+        contrasenaLabel.frame = CGRectMake(nombreLabel.frame.origin.x + 29, email2Label.frame.origin.y + 54, 360, 30);
+        sexoCampo.frame = CGRectMake(contrasenaLabel.frame.origin.x - 48, contrasenaLabel.frame.origin.y + 54, 98, 32);
+        butonsexo.frame = CGRectMake(contrasenaLabel.frame.origin.x - 58, contrasenaLabel.frame.origin.y + 54, 98, 32);
+        fechasexo.frame = CGRectMake(butonsexo.frame.origin.x + 81, butonsexo.frame.origin.y + 10, 16, 9);
+        fechacampo.frame = CGRectMake(sexoCampo.frame.origin.x + 283, contrasenaLabel.frame.origin.y + 54, 129, 30);
+        butonfecha.frame = CGRectMake(sexoCampo.frame.origin.x + 115, butonsexo.frame.origin.y , 303, 37);
+        fechafecha.frame = CGRectMake(fechacampo.frame.origin.x + 108, fechacampo.frame.origin.y + 10, 16, 9);
+        privacidad.frame = CGRectMake(150, 602, 470, 46);
+        
+    }else{
+        imageview.image = [UIImage imageNamed:@"Reg_screen.jpg"];
+        nombreLabel.frame = CGRectMake(361, 172, 389, 30);
+        apellidoLabel.frame = CGRectMake(nombreLabel.frame.origin.x, nombreLabel.frame.origin.y + 57, 389, 30);
+        emailLabel.frame = CGRectMake(nombreLabel.frame.origin.x, apellidoLabel.frame.origin.y + 57, 389, 30);
+        email2Label.frame = CGRectMake(nombreLabel.frame.origin.x + 67, emailLabel.frame.origin.y + 55, 317, 30);
+        contrasenaLabel.frame = CGRectMake(nombreLabel.frame.origin.x + 29, email2Label.frame.origin.y + 54, 360, 30);
+        sexoCampo.frame = CGRectMake(contrasenaLabel.frame.origin.x - 48, contrasenaLabel.frame.origin.y + 54, 98, 32);
+        butonsexo.frame = CGRectMake(contrasenaLabel.frame.origin.x - 58, contrasenaLabel.frame.origin.y + 54, 98, 32);
+        fechasexo.frame = CGRectMake(butonsexo.frame.origin.x + 81, butonsexo.frame.origin.y + 10, 16, 9);
+        fechacampo.frame = CGRectMake(sexoCampo.frame.origin.x + 283, contrasenaLabel.frame.origin.y + 54, 129, 30);
+        butonfecha.frame = CGRectMake(sexoCampo.frame.origin.x + 115, butonsexo.frame.origin.y , 303, 37);
+        fechafecha.frame = CGRectMake(fechacampo.frame.origin.x + 108, fechacampo.frame.origin.y + 10, 16, 9);
+        privacidad.frame = CGRectMake(privacidad.frame.origin.x, privacidad.frame.origin.y + 40, 470, 46);
+    }
+    
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation{
+    orientacion = interfaceOrientation;
+    if([[UIApplication sharedApplication] statusBarOrientation] == 1 || [[UIApplication sharedApplication] statusBarOrientation] == 2){
+        imageview.image = [UIImage imageNamed:@"Reg_screen_port.jpg"];
+        nombreLabel.frame = CGRectMake(231, 257, 389, 30);
+        apellidoLabel.frame = CGRectMake(nombreLabel.frame.origin.x, nombreLabel.frame.origin.y + 57, 389, 30);
+        emailLabel.frame = CGRectMake(nombreLabel.frame.origin.x, apellidoLabel.frame.origin.y + 57, 389, 30);
+        email2Label.frame = CGRectMake(nombreLabel.frame.origin.x + 67, emailLabel.frame.origin.y + 55, 317, 30);
+        contrasenaLabel.frame = CGRectMake(nombreLabel.frame.origin.x + 29, email2Label.frame.origin.y + 54, 360, 30);
+        sexoCampo.frame = CGRectMake(contrasenaLabel.frame.origin.x - 48, contrasenaLabel.frame.origin.y + 54, 98, 32);
+        butonsexo.frame = CGRectMake(contrasenaLabel.frame.origin.x - 58, contrasenaLabel.frame.origin.y + 54, 98, 32);
+        fechasexo.frame = CGRectMake(butonsexo.frame.origin.x + 81, butonsexo.frame.origin.y + 10, 16, 9);
+        fechacampo.frame = CGRectMake(sexoCampo.frame.origin.x + 283, contrasenaLabel.frame.origin.y + 54, 129, 30);
+        butonfecha.frame = CGRectMake(sexoCampo.frame.origin.x + 115, butonsexo.frame.origin.y , 303, 37);
+        fechafecha.frame = CGRectMake(fechacampo.frame.origin.x + 108, fechacampo.frame.origin.y + 10, 16, 9);
+        privacidad.frame = CGRectMake(150, 602, 470, 46);
+        
+    }else{
+        imageview.image = [UIImage imageNamed:@"Reg_screen.jpg"];
+        nombreLabel.frame = CGRectMake(361, 172, 389, 30);
+        apellidoLabel.frame = CGRectMake(nombreLabel.frame.origin.x, nombreLabel.frame.origin.y + 57, 389, 30);
+        emailLabel.frame = CGRectMake(nombreLabel.frame.origin.x, apellidoLabel.frame.origin.y + 57, 389, 30);
+        email2Label.frame = CGRectMake(nombreLabel.frame.origin.x + 67, emailLabel.frame.origin.y + 55, 317, 30);
+        contrasenaLabel.frame = CGRectMake(nombreLabel.frame.origin.x + 29, email2Label.frame.origin.y + 54, 360, 30);
+        sexoCampo.frame = CGRectMake(contrasenaLabel.frame.origin.x - 48, contrasenaLabel.frame.origin.y + 54, 98, 32);
+        butonsexo.frame = CGRectMake(contrasenaLabel.frame.origin.x - 58, contrasenaLabel.frame.origin.y + 54, 98, 32);
+        fechasexo.frame = CGRectMake(butonsexo.frame.origin.x + 81, butonsexo.frame.origin.y + 10, 16, 9);
+        fechacampo.frame = CGRectMake(sexoCampo.frame.origin.x + 283, contrasenaLabel.frame.origin.y + 54, 129, 30);
+        butonfecha.frame = CGRectMake(sexoCampo.frame.origin.x + 115, butonsexo.frame.origin.y , 303, 37);
+        fechafecha.frame = CGRectMake(fechacampo.frame.origin.x + 108, fechacampo.frame.origin.y + 10, 16, 9);
+        privacidad.frame = CGRectMake(privacidad.frame.origin.x, privacidad.frame.origin.y + 40, 470, 46);
+
+    }
+    
+    return YES;
 }
 
 

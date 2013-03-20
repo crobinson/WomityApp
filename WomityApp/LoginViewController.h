@@ -16,6 +16,9 @@
     NSString *databaseName;
 	NSString *databasePath;
     NSString *aSesion;
+    IBOutlet UIView *lineaolvidar;
+    IBOutlet UIButton *olvidarbutton;
+    IBOutlet UIImageView *imageview;
 }
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *reloj;
 @property (strong, nonatomic) IBOutlet UIView *vistareloj;

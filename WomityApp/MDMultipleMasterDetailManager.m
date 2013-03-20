@@ -54,10 +54,10 @@
 -(void)splitViewController:(UISplitViewController *)svc willHideViewController:(UIViewController *)aViewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)pc
 {
     
-    /*UIButton *settingsView = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
+    UIButton *settingsView = [[UIButton alloc] initWithFrame:CGRectMake(10, 20, 37, 44)];
     [settingsView addTarget:[barButtonItem target] action:[barButtonItem action] forControlEvents:UIControlEventTouchUpInside];
-    [settingsView setBackgroundImage:[UIImage imageNamed:@"menu.png"] forState:UIControlStateNormal];
-    [barButtonItem setCustomView:settingsView];*/
+    [settingsView setBackgroundImage:[UIImage imageNamed:@"Menu-port.jpg"] forState:UIControlStateNormal];
+    [barButtonItem setCustomView:settingsView];
     
     self.masterBarButtonItem = barButtonItem;
     self.masterPopoverController = pc;
@@ -110,7 +110,7 @@
 
 -(void)callNewViewControllerByString:(NSString *)string{
     
-     UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"iPad2StoryBoard" bundle:nil];
+     UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle:nil];
     
     UINavigationController* detailRootController = [storyboard instantiateViewControllerWithIdentifier:string];
     UIViewController* detailControler = detailRootController.topViewController;

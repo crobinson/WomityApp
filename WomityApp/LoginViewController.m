@@ -7,6 +7,8 @@
 //
 
 #import "LoginViewController.h"
+#import "AppDelegate.h"
+#import "MDMultipleMasterDetailManager.h"
 
 @interface LoginViewController ()
 
@@ -125,7 +127,26 @@
         if ([[json objectForKey:@"boolLogin"] isEqualToString:@"true"])
 	{
         //[self dismissModalViewControllerAnimated:YES];
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+            AppDelegate *delegado = [[UIApplication sharedApplication] delegate];
+            UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle:nil];
+            UISplitViewController * splitViewController = [storyboard instantiateViewControllerWithIdentifier:@"split"];
+            
+            //Medida de menu en ancho e inclusión de Gestures al menu
+            [splitViewController setValue:[NSNumber numberWithFloat:256.0] forKey:@"_masterColumnWidth"];
+            if ([splitViewController respondsToSelector:@selector(setPresentsWithGesture:)])
+                [splitViewController setPresentsWithGesture:YES];
+            
+            UIViewController* detail2 = [splitViewController.storyboard instantiateViewControllerWithIdentifier:@"home"];
+            
+            delegado.masterDetailManager = [[MDMultipleMasterDetailManager alloc] initWithSplitViewController:splitViewController
+                                                                                withDetailRootControllers:[NSArray arrayWithObjects:detail2,nil]];
+
+            
+            delegado.window.rootViewController = splitViewController;
+        }else
         [self performSegueWithIdentifier:@"logueado" sender:self];
+        
         [[NSUserDefaults standardUserDefaults] setValue:[json objectForKey:@"Nombre"] forKey:@"NombreUsuario"];
     }else{
         UIAlertView *alerta = [[UIAlertView alloc] initWithTitle:@"Mensaje" message:@"E-mail  o contraseña incorrecto" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
@@ -230,6 +251,64 @@
     [[UIApplication sharedApplication] openURL:url];
 }
 
+- (NSUInteger)supportedInterfaceOrientations {
+    
+    if([[UIApplication sharedApplication] statusBarOrientation] == 1|| [[UIApplication sharedApplication] statusBarOrientation] == 2){
+        
+        imageview.image = [UIImage imageNamed:@"Login_port.jpg"];
+        paswordTextField.frame = CGRectMake(169, 386, 431, 47);
+        olvidarbutton.frame = CGRectMake(emailTextField.frame.origin.x, emailTextField.frame.origin.y + 163, 216, 19);
+        lineaolvidar.frame = CGRectMake(emailTextField.frame.origin.x, emailTextField.frame.origin.y + 163 +22, 216, 1);
+        
+    }else{
+        imageview.image = [UIImage imageNamed:@"Login.jpg"];
+        paswordTextField.frame = CGRectMake(emailTextField.frame.origin.x, emailTextField.frame.origin.y + 55, 431, 47);
+        olvidarbutton.frame = CGRectMake(emailTextField.frame.origin.x, emailTextField.frame.origin.y + 133, 216, 19);
+        lineaolvidar.frame = CGRectMake(emailTextField.frame.origin.x, emailTextField.frame.origin.y + 133 +22, 216, 1);
 
+       
+        
+    }
 
+    return (UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscape  | UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight);
+}
+
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
+    if([[UIApplication sharedApplication] statusBarOrientation] == 3|| [[UIApplication sharedApplication] statusBarOrientation] == 4){
+        
+        imageview.image = [UIImage imageNamed:@"Login_port.jpg"];
+        paswordTextField.frame = CGRectMake(169, 386, 431, 47);
+        olvidarbutton.frame = CGRectMake(emailTextField.frame.origin.x, emailTextField.frame.origin.y + 163, 216, 19);
+        lineaolvidar.frame = CGRectMake(emailTextField.frame.origin.x, emailTextField.frame.origin.y + 163 +22, 216, 1);
+        
+    }else{
+        imageview.image = [UIImage imageNamed:@"Login.jpg"];
+        paswordTextField.frame = CGRectMake(emailTextField.frame.origin.x, emailTextField.frame.origin.y + 55, 431, 47);
+        olvidarbutton.frame = CGRectMake(emailTextField.frame.origin.x, emailTextField.frame.origin.y + 133, 216, 19);
+        lineaolvidar.frame = CGRectMake(emailTextField.frame.origin.x, emailTextField.frame.origin.y + 133 +22, 216, 1);
+        
+
+    }
+        
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation{
+    
+    if([[UIApplication sharedApplication] statusBarOrientation] == 1 || [[UIApplication sharedApplication] statusBarOrientation] == 2){
+        imageview.image = [UIImage imageNamed:@"Login_port.jpg"];
+        paswordTextField.frame = CGRectMake(169, 386, 431, 47);
+        olvidarbutton.frame = CGRectMake(emailTextField.frame.origin.x, emailTextField.frame.origin.y + 163, 216, 19);
+        lineaolvidar.frame = CGRectMake(emailTextField.frame.origin.x, emailTextField.frame.origin.y + 163 +22, 216, 1);
+        
+    }else{
+        imageview.image = [UIImage imageNamed:@"Login.jpg"];
+        paswordTextField.frame = CGRectMake(emailTextField.frame.origin.x, emailTextField.frame.origin.y + 55, 431, 47);
+        olvidarbutton.frame = CGRectMake(emailTextField.frame.origin.x, emailTextField.frame.origin.y + 133, 216, 19);
+        lineaolvidar.frame = CGRectMake(emailTextField.frame.origin.x, emailTextField.frame.origin.y + 133 +22, 216, 1);
+
+        
+    }
+    
+    return YES;
+}
 @end

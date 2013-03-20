@@ -147,33 +147,8 @@
     [[NSUserDefaults standardUserDefaults] setValue:@"A" forKey:@"tipowomit"];
     [[NSUserDefaults standardUserDefaults] setValue:@"crear" forKey:@"accioncrear"];
     
-    NSLog(@"%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"id"]);
     
-    if ([[NSUserDefaults standardUserDefaults] valueForKey:@"id"] == NULL){
-        [self performSegueWithIdentifier:@"gotoLogin" sender:self];
-        /*}else if([[NSUserDefaults standardUserDefaults] valueForKey:@"idfacebook"] != NULL) {
-         responseData = [NSMutableData data];
-         
-         NSString *post = [NSString stringWithFormat:@"&email=%@&contrasena=%@",self.emailTextField.text, self.paswordTextField.text];
-         NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
-         NSString *postLength = [NSString stringWithFormat:@"%d",[postData length]];
-         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-         [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://www.womity.com/ws/login"]]];
-         [request setHTTPMethod:@"POST"];
-         [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
-         [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Current-Type"];
-         [request setHTTPBody:postData];
-         NSURLConnection *conn = [[NSURLConnection alloc]initWithRequest:request delegate:self];
-         if(conn)
-         {
-         NSLog(@"Connection Successful");
-         }
-         else
-         {
-         NSLog(@"Connection could not be made");
-         }*/
-        
-    }else{
+    
         NSLog(@"%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"id"]);
         responseData = [NSMutableData data];
         
@@ -197,7 +172,7 @@
         }
         
         
-    }
+    
 [super viewDidAppear:animated];
 }
 

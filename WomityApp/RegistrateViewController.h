@@ -32,6 +32,12 @@
     NSMutableArray *arraySexo;
     NSMutableArray *arrayFecha;
     UIInterfaceOrientation orientacion;
+    IBOutlet UIImageView *imageview;
+    IBOutlet UITextView *privacidad;
+    IBOutlet UIButton *butonfecha;
+    IBOutlet UIButton *butonsexo;
+    IBOutlet UIImageView *fechasexo;
+    IBOutlet UIImageView *fechafecha;
 }
 @property (strong, nonatomic) IBOutlet UITextField *fechacampo;
 @property (strong, nonatomic) IBOutlet UITextField *sexoCampo;

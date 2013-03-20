@@ -28,24 +28,30 @@
         
         //iPad
         
-        UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"iPad2StoryBoard" bundle:nil];
+        UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle:nil];
+        if ([[NSUserDefaults standardUserDefaults] valueForKey:@"id"] == NULL){
+            
+            UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle:nil];
+            self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"login"];
+        }else{
+            UISplitViewController * splitViewController = [storyboard instantiateViewControllerWithIdentifier:@"split"];
         
-        UISplitViewController * splitViewController = [storyboard instantiateViewControllerWithIdentifier:@"split"];
+            //Medida de menu en ancho e inclusión de Gestures al menu
+            [splitViewController setValue:[NSNumber numberWithFloat:256.0] forKey:@"_masterColumnWidth"];
+            if ([splitViewController respondsToSelector:@selector(setPresentsWithGesture:)])
+                [splitViewController setPresentsWithGesture:YES];
         
-        //Medida de menu en ancho e inclusión de Gestures al menu
-        [splitViewController setValue:[NSNumber numberWithFloat:256.0] forKey:@"_masterColumnWidth"];
-        if ([splitViewController respondsToSelector:@selector(setPresentsWithGesture:)])
-            [splitViewController setPresentsWithGesture:YES];
+            //Decisión de vista principal segun identificador  del Storyboard elegido.
+            UIViewController* detail2 = [splitViewController.storyboard instantiateViewControllerWithIdentifier:@"home"];
         
-        //Decisión de vista principal segun identificador  del Storyboard elegido.
-        UIViewController* detail2 = [splitViewController.storyboard instantiateViewControllerWithIdentifier:@"home"];
-        
-        //Crecion del masterDetailManager = Permite el cambio de vista principal desde el menu para el contenedor del splitViewController
-        self.masterDetailManager = [[MDMultipleMasterDetailManager alloc] initWithSplitViewController:splitViewController
+            //Crecion del masterDetailManager = Permite el cambio de vista principal desde el menu para el contenedor del splitViewController
+            self.masterDetailManager = [[MDMultipleMasterDetailManager alloc] initWithSplitViewController:splitViewController
                                                                             withDetailRootControllers:[NSArray arrayWithObjects:detail2,nil]];
         
-        //Definición del RootViewController  o vista Raiz
-        self.window.rootViewController =splitViewController;
+            //Definición del RootViewController  o vista Raiz
+            self.window.rootViewController =splitViewController;
+            
+        }
         
     }
     
