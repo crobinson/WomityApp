@@ -13,6 +13,7 @@
 @interface MDMasterViewController : UITableViewController{
 
     NSMutableArray *array;
+    NSString *detailtemporal;
     
 }
 

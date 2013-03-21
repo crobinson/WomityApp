@@ -52,9 +52,11 @@
     
     [self.tableView setDelegate:self];
     [self.tableView setDataSource:self];
-    
+    detailtemporal = @"home";
     array = [[NSMutableArray alloc] init];
+    [array addObject:@"cerrar"];
     [array addObject:@"home"];
+    [array addObject:@"activos"];
     [array addObject:@"detail"];
         
 }
@@ -79,8 +81,16 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-        AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    if(indexPath.row!=0){
         [appdelegate.masterDetailManager callNewViewControllerByString:[array objectAtIndex:indexPath.row]];
+        detailtemporal = [array objectAtIndex:indexPath.row];
+    }else{
+        [appdelegate.masterDetailManager callNewViewControllerByString:detailtemporal];
+    }
+    
+    
 }
 
 

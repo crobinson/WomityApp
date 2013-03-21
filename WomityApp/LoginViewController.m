@@ -252,7 +252,7 @@
 }
 
 - (NSUInteger)supportedInterfaceOrientations {
-    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
     if([[UIApplication sharedApplication] statusBarOrientation] == 1|| [[UIApplication sharedApplication] statusBarOrientation] == 2){
         
         imageview.image = [UIImage imageNamed:@"Login_port.jpg"];
@@ -274,6 +274,7 @@
 }
 
 -(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
     if([[UIApplication sharedApplication] statusBarOrientation] == 3|| [[UIApplication sharedApplication] statusBarOrientation] == 4){
         
         imageview.image = [UIImage imageNamed:@"Login_port.jpg"];
@@ -293,7 +294,7 @@
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation{
-    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) 
     if([[UIApplication sharedApplication] statusBarOrientation] == 1 || [[UIApplication sharedApplication] statusBarOrientation] == 2){
         imageview.image = [UIImage imageNamed:@"Login_port.jpg"];
         paswordTextField.frame = CGRectMake(169, 386, 431, 47);

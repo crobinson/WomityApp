@@ -16,7 +16,7 @@
 
 @class popViewContainer;
 
-@interface WomitsViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,MFMailComposeViewControllerDelegate, UIWebViewDelegate,UIActionSheetDelegate, UITabBarControllerDelegate, popViewControllerDelegate>
+@interface WomitsViewController : UIViewController<UISplitViewControllerDelegate, UITableViewDataSource,UITableViewDelegate,MFMailComposeViewControllerDelegate, UIWebViewDelegate,UIActionSheetDelegate, UITabBarControllerDelegate, popViewControllerDelegate>
 {
     NSString * tipo;
     BOOL ishide;
@@ -50,6 +50,7 @@
 @property (weak, nonatomic) IBOutlet UIView *vistareloj;
 @property (strong, nonatomic) NSDictionary *datawomit;
 @property (strong, nonatomic) NSDictionary *datawomitpop;
+@property (strong, nonatomic) id detailItem;
 - (IBAction)cerrarimagen:(id)sender;
 - (IBAction)loadtipoA:(id)sender;
 - (IBAction)loadtipoB:(id)sender;
@@ -59,4 +60,5 @@
 - (IBAction)amigos:(id)sender;
 -(IBAction) Loadcrear:(id)sender;
 - (IBAction)onButtonClick:(UIButton *)button;
+
 @end

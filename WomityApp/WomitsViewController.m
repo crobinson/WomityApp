@@ -16,14 +16,17 @@
 #import "ComentariosViewController.h"
 #import "FacebookViewController.h"
 #import "invitar2ViewController.h"
+#import "AppDelegate.h"
+#import "MDMultipleMasterDetailManager.h"
 
 
 @interface WomitsViewController ()
-
+@property (strong, nonatomic) UIPopoverController *masterPopoverController;
 @end
 
 @implementation WomitsViewController
 @synthesize tipo, vistaimagen, idWomity, dataseleccionado, myTableView, responseData, womities, reloj, aSesion, datawomit, vistareloj, botoncerrar, titulo, datawomitpop;
+@synthesize masterPopoverController = _masterPopoverController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,6 +35,31 @@
         // Custom initialization
     }
     return self;
+}
+
+#pragma mark - Managing the detail item
+- (void)setDetailItem:(id)newDetailItem
+{
+    if (_detailItem != newDetailItem) {
+        _detailItem = newDetailItem;
+        
+        // Update the view.
+        [self configureView];
+    }
+    
+    AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    if (appdelegate.masterDetailManager.masterPopoverController != nil) {
+        [appdelegate.masterDetailManager.masterPopoverController dismissPopoverAnimated:YES];
+    }
+    
+}
+
+- (void)configureView
+{
+    // Update the user interface for the detail item
+    if (self.detailItem) {
+        
+    }
 }
 
 - (void)viewDidLoad
@@ -49,6 +77,7 @@
 
 -(void) viewWillAppear:(BOOL)animated
 {
+    [self setDetailItem:[NSNumber numberWithInt:0]];
     self.tabBarController.delegate = self;
     
     if([[[NSUserDefaults standardUserDefaults] valueForKey:@"soloactivos"] isEqualToString:@"true"]){
@@ -291,6 +320,7 @@
     NSString *cadenarespuesta = [NSString stringWithFormat:@"%@",json];
     
     NSString *urlconexion = [NSString stringWithFormat:@"%@",connection.currentRequest.URL];
+    NSLog(@"%@",urlconexion);
     if([urlconexion isEqualToString:@"http://www.womity.com/ws/getWomity"])
     {
         if ([cadenarespuesta rangeOfString:@"IdSesionNoValido"].location == NSNotFound) {
@@ -446,6 +476,11 @@
     
     cell.View2.frame = CGRectMake(cell.View2.frame.origin.x, cell.View2.frame.origin.y, cell.View2.frame.size.width, 120);
     cell.View1.frame = CGRectMake(-320, cell.View2.frame.origin.y, cell.View2.frame.size.width, 100);
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
+        cell.View2.frame = CGRectMake(cell.View2.frame.origin.x, cell.View2.frame.origin.y, cell.View2.frame.size.width, 195);
+        cell.View1.frame = CGRectMake(-768, cell.View2.frame.origin.y, cell.View2.frame.size.width, 175);
+    }
+    
     
     if([tipo isEqualToString:@"B"]){
         cell.vistagris.frame = CGRectMake(cell.vistagris.frame.origin.x, cell.View2.frame.size.height - 20, 0, 0);
@@ -703,8 +738,10 @@ if([tipo isEqualToString:@"B"]){
     
     NSDictionary *datadiccionario = [womities objectAtIndex:indexPath.row];
     NSMutableArray *opciones = [datadiccionario objectForKey:@"Opciones"];
-    
     CGFloat height = 130.0;
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+        height = 200.0;
+    
     
     if([tipo isEqualToString:@"B"] ){
         height = 110.0;
@@ -1328,5 +1365,26 @@ if([tipo isEqualToString:@"B"]){
 - (void)viewDidUnload {
     relojimagen = nil;
     [super viewDidUnload];
+}
+
+/*
+ Delegate del SplitView, permite cambiar el boton del menu por imagenes o dejarse.
+ */
+#pragma mark - Split view
+
+- (void)splitViewController:(UISplitViewController *)splitController willHideViewController:(UIViewController *)viewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)popoverController
+{
+    
+    
+    [self.navigationItem setLeftBarButtonItem:barButtonItem animated:YES];
+    barButtonItem.title = NSLocalizedString(@"Master", @"Master");
+    self.masterPopoverController = popoverController;
+}
+
+- (void)splitViewController:(UISplitViewController *)splitController willShowViewController:(UIViewController *)viewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
+{
+    // Called when the view is shown again in the split view, invalidating the button and popover controller.
+    [self.navigationItem setLeftBarButtonItem:nil animated:YES];
+    self.masterPopoverController = nil;
 }
 @end

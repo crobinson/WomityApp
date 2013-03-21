@@ -37,7 +37,7 @@
             UISplitViewController * splitViewController = [storyboard instantiateViewControllerWithIdentifier:@"split"];
         
             //Medida de menu en ancho e inclusión de Gestures al menu
-            [splitViewController setValue:[NSNumber numberWithFloat:256.0] forKey:@"_masterColumnWidth"];
+            [splitViewController setValue:[NSNumber numberWithFloat:235.0] forKey:@"_masterColumnWidth"];
             if ([splitViewController respondsToSelector:@selector(setPresentsWithGesture:)])
                 [splitViewController setPresentsWithGesture:YES];
         
